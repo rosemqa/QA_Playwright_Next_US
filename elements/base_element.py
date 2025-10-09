@@ -17,11 +17,11 @@ class BaseElement:
 
     def get_locator(self, nth: int = 0, **kwargs):
         locator = self.locator.format(**kwargs)
-        step = f'Get locator with "data-testid" = {self.locator} at index "{nth}"'
+        step = f'Get locator "{locator}" at index "{nth}"'
 
         with allure.step(step):
             logger.info(step)
-            return self.page.get_by_test_id(locator).nth(nth)
+            return self.page.locator(locator).nth(nth)
 
     def click(self, nth: int = 0, **kwargs):
         step = f'Click {self.type_of} "{self.name}"'
@@ -32,12 +32,36 @@ class BaseElement:
             locator.click()
 
     def check_visible(self, nth: int = 0, **kwargs):
-        step = f'Check that {self.type_of} "{self.name} is visible"'
+        step = f'Check that {self.type_of} "{self.name}" is visible'
 
         with allure.step(step):
             locator = self.get_locator(nth, **kwargs)
             logger.info(step)
             expect(locator).to_be_visible()
+
+    def check_not_visible(self, nth: int = 0, **kwargs):
+        step = f'Check that {self.type_of} "{self.name}" is not visible'
+
+        with allure.step(step):
+            locator = self.get_locator(nth, **kwargs)
+            logger.info(step)
+            expect(locator).not_to_be_visible()
+
+    def check_missing(self, nth: int = 0, **kwargs):
+        step = f'Check that {self.type_of} "{self.name}" is missing'
+
+        with allure.step(step):
+            locator = self.get_locator(nth, **kwargs)
+            logger.info(step)
+            expect(locator).not_to_be_attached()
+
+    def get_text(self, nth: int = 0, **kwargs):
+        step = f'Get text of the "{self.name}" {self.type_of}'
+
+        with allure.step(step):
+            locator = self.get_locator(nth, **kwargs)
+            logger.info(step)
+            return locator.inner_text()
 
     def check_have_text(self, text: str, nth: int = 0, **kwargs):
         step = f'Check that {self.type_of} "{self.name}" has text "{text}"'
@@ -46,3 +70,20 @@ class BaseElement:
             locator = self.get_locator(nth, **kwargs)
             logger.info(step)
             expect(locator).to_have_text(text)
+
+    def check_css_property(self, property_name: str, property_value: str, nth: int = 0, **kwargs):
+        step = f'Check css property "{property_name}" of the "{self.name}" {self.type_of} has value {property_value}'
+        with (allure.step(step)):
+            locator = self.get_locator(nth, **kwargs)
+            logger.info(step)
+            current_property_value = locator.evaluate(f"element => getComputedStyle(element).{property_name}")
+            assert current_property_value == property_value, \
+                f'Actual property value: {current_property_value}, expected: {property_value}'
+
+    def check_in_viewport(self, nth: int = 0, **kwargs):
+        step = f'Check that the "{self.name}" {self.type_of} is in viewport'
+
+        with allure.step(step):
+            locator = self.get_locator(nth, **kwargs)
+            logger.info(step)
+            expect(locator).to_be_in_viewport()
