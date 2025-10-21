@@ -51,3 +51,20 @@ class BasePage:
     def close_country_selector(self):
         if self.is_element_present(locator='[data-testid="country-selector-close-button"]', timeout=2):
             self.page.get_by_test_id('country-selector-close-button').click()
+
+    def press_page_down(self, n: int = 1):
+        step = f'Press the Page Down key {n} times'
+
+        with allure.step(step):
+            logger.info(step)
+            self.page.focus("body")
+            for _ in range(n):
+                self.page.keyboard.press('PageDown')
+
+    def check_page_scrolled_to_top(self):
+        step = 'Check that page is scrolled to the top'
+
+        with allure.step(step):
+            logger.info(step)
+            scroll_position = self.page.evaluate("window.scrollY")
+            assert scroll_position == 0, 'The page is not scrolled to the top'

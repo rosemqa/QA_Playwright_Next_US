@@ -1,7 +1,7 @@
 import pytest
 from playwright.sync_api import sync_playwright, Browser, Page
-
 from pages.main_page import MainPage
+from pages.product_page import ProductPage
 
 
 @pytest.fixture(scope='session')
@@ -23,7 +23,7 @@ def page(browser: Browser) -> Page:
         record_video_dir='./videos'
     )
     page = context.new_page()
-    page.set_default_timeout(timeout=30000)
+    page.set_default_timeout(timeout=10000)
     yield page
     context.close()
 
@@ -31,3 +31,8 @@ def page(browser: Browser) -> Page:
 @pytest.fixture()
 def main_page(page):
     return MainPage(page)
+
+
+@pytest.fixture()
+def product_page(page):
+    return ProductPage(page)
