@@ -163,7 +163,6 @@ class ProductPage(BasePage):
     def check_sign_in_pop_up_appears(self):
         self.sign_in_pop_up.check_visible()
 
-    # @allure.step(f'Check that sign_in_pop disappears after {timeout} milliseconds')
     def check_sign_in_pop_up_disappears(self, timeout):
         with allure.step(f'Check that sign_in_pop disappears after {timeout/1000} seconds'):
             self.sign_in_pop_up.check_not_visible(timeout=timeout)
