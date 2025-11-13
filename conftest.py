@@ -1,6 +1,7 @@
 import pytest
 from playwright.sync_api import sync_playwright, Browser, Page
 from pages.main_page import MainPage
+from pages.product_listing_page import ProductListingPage
 from pages.product_page import ProductPage
 
 
@@ -36,3 +37,8 @@ def main_page(page):
 @pytest.fixture()
 def product_page(page):
     return ProductPage(page)
+
+
+@pytest.fixture()
+def plp(page):
+    return ProductListingPage(page)

@@ -60,6 +60,7 @@ class BasePage:
             self.page.focus("body")
             for _ in range(n):
                 self.page.keyboard.press('PageDown')
+                time.sleep(2)
 
     def check_page_scrolled_to_top(self):
         step = 'Check that page is scrolled to the top'
@@ -68,3 +69,17 @@ class BasePage:
             logger.info(step)
             scroll_position = self.page.evaluate("window.scrollY")
             assert scroll_position == 0, 'The page is not scrolled to the top'
+
+    def drag_and_drop_by_offset(self, selector, offset_x=0, offset_y=0):
+        step = f'Drag and drop an element by offset'
+
+        with allure.step(step):
+            element = self.page.query_selector(selector)
+            box = element.bounding_box()
+            start_x = box['x'] + box['width'] / 2
+            start_y = box['y'] + box['height'] / 2
+            logger.info(step)
+            self.page.mouse.move(start_x, start_y)
+            self.page.mouse.down()
+            self.page.mouse.move(start_x + offset_x, start_y + offset_y, steps=10)
+            self.page.mouse.up()

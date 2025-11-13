@@ -3,6 +3,7 @@ import re
 import time
 import allure
 from playwright.sync_api import Page
+from components.navbar_component import NavbarComponent
 from data.links import URL
 from elements.button import Button
 from elements.checkbox import Checkbox
@@ -10,6 +11,7 @@ from elements.component import Component
 from elements.dropdown import Dropdown
 from elements.dropdown_item import DropdownItem
 from elements.link import Link
+from elements.slider import Slider
 from elements.text import Text
 from pages.base_page import BasePage
 from tools.logger import get_logger
@@ -23,12 +25,16 @@ class ProductListingPage(BasePage):
 
     def __init__(self, page: Page):
         super().__init__(page)
+        self.navbar = NavbarComponent(page)
 
         self.new_in_filter = Checkbox(page, '[data-testid="plp-facet-checkbox-feat-feat:newin"]', 'New In')
         self.clearance_filter = Checkbox(
             page, '[data-testid="plp-facet-checkbox-feat-feat:sale"]', 'Clearance')
         self.more_less_filters = Button(page, 'div[id*="plp-horizontal-filter-"]', 'MORE/LESS filters')
-        self.price_filter = Button(page, '[data-testid="plp-filter-label-button-price"]', 'Price filter')
+        self.price_filter = Button(page, '[data-testid="plp-filter-chevron-price"]', 'Price filter')
+        self.min_price_handle = Slider(page, '[aria-label="Set minimum value"]', 'MIN price')
+        self.max_price_handle = Slider(page, '[aria-label="Set maximum value"]', 'MAX price')
+        self.price_range = Text(page, '#plp-price-slider span', 'Price range value')
         self.sort_filter = Dropdown(page, '[data-testid="plp-desktop-sort-button"]', 'Sort')
         self.sort_by_price_asc = DropdownItem(page, '[data-value="price"]', 'Price: Low - High')
         self.sort_by_price_desc = DropdownItem(page, '[data-value="pricerev"]', 'Price: High - Low')
@@ -52,6 +58,8 @@ class ProductListingPage(BasePage):
         self.product_price = Text(page, '[data-testid="product_summary_was_price"]', 'Product price')
         self.sale_price = Text(page, '[data-testid="product_summary_sale_price"]', 'Product sale price')
         self.any_price = Text(page, '[data-testid$="_price"]', 'Product was/now price')
+        self.color_chips = Component(
+            page, '[data-testid="product_summary_colourchips"]', 'Product colourchips')
         self.product_color = Link(page, '[data-testid="product_summary_colourchips"] li a', 'Product color')
         self.favorites_btn = Button(
             page, '[data-testid="product-summary-favourites-button"]', 'Add to favorites')
@@ -74,6 +82,7 @@ class ProductListingPage(BasePage):
 
     def select_new_in_filter(self):
         self.new_in_filter.click()
+        time.sleep(1)
 
     @allure.step('Check that number of product cards with "New In" tag is equal to the number of all cards')
     def check_new_in_cards_count(self):
@@ -140,6 +149,7 @@ class ProductListingPage(BasePage):
         self.size_filter.click()
         random_item = random.randint(0, 10)
         self.size_item.click(nth=random_item)
+        time.sleep(1)
         size_item_count = self.size_item_count.get_text(random_item)
         return size_item_count
 
@@ -180,3 +190,86 @@ class ProductListingPage(BasePage):
 
     def check_back_to_top_btn_is_hidden(self):
         self.back_to_top_btn.check_not_visible()
+
+    def click_price_filter(self):
+        self.price_filter.click()
+
+    @allure.step('Set the min price on the price slider')
+    def set_min_price(self):
+        self.min_price_handle.move_slider(offset_x=random.randint(20, 50))
+        time.sleep(1)
+        return self.get_min_price_value_in_price_range()
+
+    @allure.step('Set the max price on the price slider')
+    def set_max_price(self):
+        self.max_price_handle.move_slider(offset_x=random.randint(-50, -20))
+        time.sleep(1)
+        return self.get_max_price_value_in_price_range()
+
+    def get_min_price_value_in_price_range(self):
+        return int(self.price_range.get_text().split()[0].lstrip('$').replace(',', ''))
+
+    def get_max_price_value_in_price_range(self):
+        return int(self.price_range.get_text().split()[2].lstrip('$').replace(',', ''))
+
+    def get_price_list(self):
+        prices = self.product_price.get_locators()
+        price_list = [int(price.inner_text().split()[0].split('$')[1].replace(',', '')) for price in prices]
+        return price_list
+
+    def check_min_price(self, min_price):
+        step = 'Check that the min price on PLP matches the min price in the price filter'
+        price_list = self.get_price_list()
+        with allure.step(step):
+            logger.info(step)
+            assert price_list[0] >= min_price
+
+    def check_max_price(self, max_price):
+        step = 'Check that the max price on PLP matches the max price in the price filter'
+        price_list = self.get_price_list()
+        with allure.step(step):
+            logger.info(step)
+            assert price_list[0] <= max_price
+
+    def click_clear_all_filters(self):
+        self.clear_all_filters.click()
+
+    @allure.step('Add a random product to Favorites')
+    def click_add_to_fav_btn(self, nth: int = random.randint(0, 10)):
+        self.favorites_btn.click(nth=nth)
+        return nth
+
+    def check_add_to_fav_btn_title(self, title_text: str, nth: int = 0):
+        self.favorites_btn.check_has_attribute(name='title', value=re.compile(title_text), nth=nth)
+
+    def get_number_of_product_cards(self):
+        return self.product_card.get_number_of_elements()
+
+    def check_number_of_product_cards(self, num: int):
+        self.product_card.check_number_of_elements(num)
+
+    @allure.step('Hover over a random product color and check that product image has changed')
+    def check_hovering_over_product_colors(self):
+        # Select a random product colour_chips
+        colour_chips = self.color_chips.get_locator(nth=random.randint(0, 5))
+
+        # Get the product image locator of selected colour_chips
+        product_card = colour_chips.locator('xpath=ancestor::div[@data-testid="plp-product-grid-item"]')
+        product_image = product_card.locator('a[tabindex="0"]>img')
+
+        # Get the product image src in the product card
+        initial_image = product_image.get_attribute('src')
+
+        # Get the number of colors in the selected color_chips
+        color = colour_chips.locator('li a img')
+        number_of_colors = color.count()
+
+        # Hover over a random color except the first one in the selected color_chips
+        random_color = color.nth(random.randint(1, number_of_colors - 1))
+        random_color.hover()
+
+        # Get the product image src in the product card
+        current_image = product_image.get_attribute('src')
+
+        # Check that the product image changed after hovering over a different color
+        assert initial_image != current_image, 'Product image did not change when hovering over a different color'
