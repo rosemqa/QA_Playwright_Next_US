@@ -1,5 +1,7 @@
+import time
 import pytest
 from playwright.sync_api import sync_playwright, Browser, Page
+from pages.favorites_page import FavoritesPage
 from pages.main_page import MainPage
 from pages.product_listing_page import ProductListingPage
 from pages.product_page import ProductPage
@@ -30,6 +32,15 @@ def page(browser: Browser) -> Page:
 
 
 @pytest.fixture()
+def add_to_favorites(page):
+    """Add a product to Favourites from PDP"""
+    page = ProductPage(page)
+    page.open()
+    page.click_add_to_fav_btn()
+    time.sleep(1)
+
+
+@pytest.fixture()
 def main_page(page):
     return MainPage(page)
 
@@ -42,3 +53,8 @@ def product_page(page):
 @pytest.fixture()
 def plp(page):
     return ProductListingPage(page)
+
+
+@pytest.fixture()
+def fav_page(page):
+    return FavoritesPage(page)

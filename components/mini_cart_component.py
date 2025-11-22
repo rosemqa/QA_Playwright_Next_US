@@ -17,7 +17,7 @@ class MiniCartComponent(BaseComponent):
         self.total = Text(page, 'span [data-testid="header-mini-shopping-bag-total"]', 'Total')
 
     def check_product_title_text(self, text: str):
-        self.product_title.check_have_text(text, 0)
+        self.product_title.check_have_text(text, 1000)
 
     def check_total_value(self, value: int):
         self.total.check_have_text(f'${value}.00')

@@ -28,3 +28,6 @@ class NavbarComponent(BaseComponent):
 
     def check_favorites_badge_is_inactive(self):
         self.inactive_fav_badge.check_visible()
+
+    def click_favorites_icon(self):
+        self.favourites_icon.click()

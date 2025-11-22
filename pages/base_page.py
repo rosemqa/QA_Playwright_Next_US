@@ -45,7 +45,8 @@ class BasePage:
 
     @allure.step('Accept cookies')
     def accept_cookies(self):
-        self.page.locator('#onetrust-accept-btn-handler').click()
+        if self.is_element_present(locator='#onetrust-accept-btn-handler', timeout=1):
+            self.page.locator('#onetrust-accept-btn-handler').click()
 
     @allure.step('Close country selector')
     def close_country_selector(self):
