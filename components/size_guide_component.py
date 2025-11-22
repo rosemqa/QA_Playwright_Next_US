@@ -19,7 +19,7 @@ class SizeGuideComponent(DrawerComponent):
         self.page.wait_for_timeout(500)
 
     def check_inches_btn_color(self, color_value: str):
-        self.inches_btn.check_css_property('backgroundColor', color_value)
+        self.inches_btn.check_css_property('background-color', color_value)
 
     def check_cm_btn_color(self, color_value: str):
-        self.cm_btn.check_css_property('backgroundColor', color_value)
+        self.cm_btn.check_css_property('background-color', color_value)

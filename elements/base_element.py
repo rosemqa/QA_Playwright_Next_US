@@ -114,7 +114,8 @@ class BaseElement:
         with allure.step(step):
             locator = self.get_locator(nth, **kwargs)
             logger.info(step)
-            current_property_value = locator.evaluate(f"element => getComputedStyle(element).{property_name}")
+            current_property_value = locator.evaluate(
+                f"element => getComputedStyle(element).getPropertyValue('{property_name}')")
             assert current_property_value == property_value, \
                 f'Actual property value: {current_property_value}, expected: {property_value}'
 
