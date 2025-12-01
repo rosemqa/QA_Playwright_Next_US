@@ -77,7 +77,7 @@ class ProductPage(BasePage):
     @allure.step('Select a random size and check it was selected')
     def select_and_check_random_size(self):
         self.size_dropdown.click()
-        random_item = randint(0, 5)
+        random_item = randint(1, 5)
         size_list_item_text = self.size_list_item.get_text(nth=random_item)
         self.size_list_item.click(nth=random_item)
         self.size_dropdown.check_have_text(size_list_item_text)

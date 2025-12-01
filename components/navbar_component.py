@@ -16,6 +16,7 @@ class NavbarComponent(BaseComponent):
         self.account = Button(page, '[data-testid="header-adaptive-my-account"]', 'My account')
         self.cart = Button(page, '[data-testid="header-shopping-bag"]', 'Cart')
         self.cart_qty = Button(page, '[data-testid="shopping-bag-link-button"]', 'Cart')
+        self.checkout = Button(page, '[data-testid="header-adaptive-checkout"] a', 'Checkout')
 
     def get_cart_qty(self):
         return self.cart_qty.get_text()
@@ -31,3 +32,10 @@ class NavbarComponent(BaseComponent):
 
     def click_favorites_icon(self):
         self.favourites_icon.click()
+
+    def check_checkout_button_is_enabled(self):
+        self.checkout.check_enabled()
+
+    def check_checkout_button_is_disabled(self):
+        self.checkout.check_disabled()
+

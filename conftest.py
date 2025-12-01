@@ -1,6 +1,7 @@
 import time
 import pytest
 from playwright.sync_api import sync_playwright, Browser, Page
+from pages.cart_page import CartPage
 from pages.favorites_page import FavoritesPage
 from pages.main_page import MainPage
 from pages.product_listing_page import ProductListingPage
@@ -34,10 +35,19 @@ def page(browser: Browser) -> Page:
 @pytest.fixture()
 def add_to_favorites(page):
     """Add a product to Favourites from PDP"""
-    page = ProductPage(page)
-    page.open()
-    page.click_add_to_fav_btn()
+    f_page = ProductPage(page)
+    f_page.open()
+    f_page.click_add_to_fav_btn()
     time.sleep(1)
+
+
+@pytest.fixture()
+def add_to_cart(page):
+    """Add a product to cart from PDP"""
+    c_page = ProductPage(page)
+    c_page.open()
+    c_page.select_and_check_random_size()
+    c_page.click_add_to_bag()
 
 
 @pytest.fixture()
@@ -58,3 +68,8 @@ def plp(page):
 @pytest.fixture()
 def fav_page(page):
     return FavoritesPage(page)
+
+
+@pytest.fixture()
+def cart_page(page):
+    return CartPage(page)
