@@ -42,8 +42,8 @@ class ProductPage(BasePage):
             page, '[data-testid=item-form-stock-status ] p', 'Select size error')
         self.next_image_btn = Button(page, 'image-action-navigation-right', 'Next image')
         self.prev_image_btn = Button(page, 'image-action-navigation-left', 'Prev image')
-        self.reviews_link = Link(page, '[data-testid="item-title-review-stars"]', 'Reviews')
-        self.reviews_title = Text(page, '[id="review-card-title"]', 'Reviews title')
+        self.reviews_link = Link(page, '[data-testid="product-rating-summary"]', 'Reviews')
+        self.reviews_title = Text(page, '#bv_review_maincontainer h2', 'Reviews title')
         self.product_image = Image(page, '[data-testid="image-gallery-slide-btn"] img', 'Product')
         self.zoom_image_btn = Button(page, '[data-testid="image-gallery-quick-actions"]', 'Zoom image')
         self.zoomed_image = Image(page, '[data-testid="superzoom-image"]', 'Zoomed')
@@ -51,9 +51,9 @@ class ProductPage(BasePage):
             page, '[data-testid="image-carousel-quick-actions-close-superzoom"]', 'Close a zoomed image')
         self.thumb = Image(
             page, '[data-testid="superzoom-modal"] [data-testid*="pdp-thumb-"] img', 'Thumb')
-        self.view_next_reviews = Button(page, '[data-testid="reviews-load-more"]', 'View next reviews')
+        self.view_next_reviews = Button(page, '//button[.="Load More"]', 'View next reviews')
         self.review_item = Component(
-            page, '[data-testid="reviews-container"] .MuiGrid-container', 'Review')
+            page, '#reviews_container section', 'Review')
         self.product_sku = Text(page, '[data-testid="product-code"]', 'Product SKU')
         self.back_to_top_btn = Button(page, '[data-testid="back-to-top"]', 'Back to top')
         self.description_header = Accordion(
@@ -121,8 +121,8 @@ class ProductPage(BasePage):
         self.reviews_title.check_in_viewport()
 
     def check_load_more_reviews(self):
-        default_reviews_number = 5
-        reviews_number_per_download = 5
+        default_reviews_number = 8
+        reviews_number_per_download = 30
         clicks_number = randint(1, 5)
         for i in range(clicks_number):
             self.view_next_reviews.click()
