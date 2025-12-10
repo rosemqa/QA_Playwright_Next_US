@@ -7,7 +7,7 @@ services:
       - .:/test_project
 
   report:
-    image: tests
+    image: playwright
     volumes:
       - .:/test_project
     command: /bin/sh -c "allure generate allure_results --clean -o allure_report"
