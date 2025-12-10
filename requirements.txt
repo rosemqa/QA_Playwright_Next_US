@@ -1,0 +1,5 @@
+pytest~=8.4.2
+playwright
+pytest-check~=2.5.4
+allure-pytest~=2.15.0
+pytest-playwright

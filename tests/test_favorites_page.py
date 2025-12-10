@@ -6,18 +6,18 @@ class TestFavoritesPage:
     @allure.title('Can add a product to cart from Favorites')
     def test_add_to_cart(self, check, add_to_favorites, fav_page):
         fav_page.open()
-        prodict_name = fav_page.get_product_name()
+        product_name = fav_page.get_product_name()
 
         fav_page.click_size_dropdown()
         fav_page.select_random_size()
         fav_page.click_add_to_bag()
 
         with check:
-            fav_page.check_moved_to_bag_notification_text(text=prodict_name)
+            fav_page.check_moved_to_bag_notification_text(text=product_name)
             fav_page.check_moved_to_bag_notification_disappears()
         with check:
             fav_page.mini_cart.check_mini_cart_is_visible()
-            fav_page.mini_cart.check_product_title_text(text=prodict_name)
+            fav_page.mini_cart.check_product_title_text(text=product_name)
         with check:
             fav_page.navbar.check_favorites_badge_is_inactive()
         with check:

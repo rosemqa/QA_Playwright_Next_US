@@ -11,9 +11,9 @@ from pages.product_page import ProductPage
 @pytest.fixture(scope='session')
 def browser() -> Browser:
     with sync_playwright() as p:
-        browser = p.chromium.launch(
-            headless=False,
-            args=['--start-maximized']
+        browser = p.firefox.launch(
+            headless=True,
+            # args=['--start-maximized']
         )
         yield browser
         browser.close()
@@ -23,8 +23,8 @@ def browser() -> Browser:
 def page(browser: Browser) -> Page:
     context = browser.new_context(
         viewport={"width": 1920, "height": 1080},
-        no_viewport=True,
-        record_video_dir='./videos'
+        # no_viewport=True,
+        # record_video_dir='./videos'
     )
     page = context.new_page()
     page.set_default_timeout(timeout=10000)

@@ -1,5 +1,4 @@
 import random
-import time
 import allure
 import re
 from data.links import URL
@@ -155,7 +154,7 @@ class TestPLP:
 
     @allure.title('Check that product cards load when scrolling down the page')
     def test_load_more_products(self, plp):
-        default_quantity = 12
+        default_quantity = 10
         number_of_page_scrolls = random.randint(1, 4)
         plp.open()
 

@@ -92,7 +92,7 @@ class BaseElement:
             logger.info(step)
             return locator.count()
 
-    def check_number_of_elements(self, number: int, **kwargs):
+    def check_number_of_elements(self, number: int):
         step = f'Check that number of "{self.name}" {self.type_of}s is {number}'
 
         with allure.step(step):

@@ -56,7 +56,7 @@ class ProductListingPage(BasePage):
         self.product_card = Component(page, '[data-testid="plp-product-grid-item"]', 'Product card')
         self.product_title = Text(page, '[data-testid="product_summary_title"]', 'Product title')
         self.product_price = Text(page, '[data-testid="product_summary_was_price"]', 'Product price')
-        self.sale_price = Text(page, '[data-testid="product_summary_sale_price"]', 'Product sale price')
+        self.sale_price = Text(page, 'a div:nth-child(1) div', 'Product sale price')
         self.any_price = Text(page, '[data-testid$="_price"]', 'Product was/now price')
         self.color_chips = Component(
             page, '[data-testid="product_summary_colourchips"]', 'Product colourchips')

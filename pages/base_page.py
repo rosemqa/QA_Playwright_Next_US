@@ -25,7 +25,7 @@ class BasePage:
 
         with allure.step(step):
             logger.info(step)
-            self.page.goto(self.PAGE_URL)
+            self.page.goto(self.PAGE_URL, wait_until="domcontentloaded")
             self.accept_cookies()
             self.close_country_selector()
 
@@ -45,12 +45,12 @@ class BasePage:
 
     @allure.step('Accept cookies')
     def accept_cookies(self):
-        if self.is_element_present(locator='#onetrust-accept-btn-handler', timeout=1):
+        if self.is_element_present(locator='#onetrust-accept-btn-handler'):
             self.page.locator('#onetrust-accept-btn-handler').click()
 
     @allure.step('Close country selector')
     def close_country_selector(self):
-        if self.is_element_present(locator='[data-testid="country-selector-close-button"]', timeout=2):
+        if self.is_element_present(locator='[data-testid="country-selector-close-button"]'):
             self.page.get_by_test_id('country-selector-close-button').click()
 
     def press_page_down(self, n: int = 1):
