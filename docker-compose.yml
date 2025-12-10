@@ -5,3 +5,9 @@ services:
     command: pytest tests/test_pdp.py -k test_select_size
     volumes:
       - .:/test_project
+
+  report:
+    image: tests
+    volumes:
+      - .:/test_project
+    command: /bin/sh -c "allure generate allure_results --clean -o allure_report"
