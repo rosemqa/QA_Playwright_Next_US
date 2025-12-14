@@ -2,7 +2,7 @@ services:
   pytest_runner:
     build: .
     image: playwright
-    command: pytest tests/test_pdp.py -k test_select_size --alluredir=allure_results/
+    command: pytest tests/test_pdp.py -k test_select_size
     volumes:
       - .:/test_project
 
