@@ -41,7 +41,7 @@ jobs:
 
   publish-report:
     if: always()
-    needs: [ run-tests ]
+    needs: [ ui-tests ]
     runs-on: ubuntu-latest
 
     steps:
