@@ -25,10 +25,10 @@ jobs:
         run: |
           docker compose up pytest_runner --exit-code-from pytest_runner || true
 
-#      - name: Copy history from gh-pages to allure_results
-#        run: |
-#          sudo mkdir -p allure_results/history
-#          sudo cp -R ./.github/gh-pages/history/* allure_results/history/
+      - name: Copy history from gh-pages to allure_results
+        run: |
+          sudo mkdir -p allure_results/history
+          sudo cp -R ./.github/gh-pages/history/* allure_results/history/
 
       - name: Generate Allure report
         run: |
