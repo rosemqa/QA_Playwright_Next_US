@@ -1,9 +1,9 @@
 name: UI tests
 
-on:
-  push:
-    branches:
-      - main
+on: workflow_dispatch
+#  push:
+#    branches:
+#      - main
 #  pull_request:
 #    branches:
 #      - main
@@ -29,7 +29,7 @@ jobs:
           
       - name: Run UI-tests with pytest and generate Allure results
         run: |
-          pytest tests/test_pdp.py -k test_select_size --reruns 2 --alluredir=allure_results
+          pytest --reruns 2 --alluredir=allure_results
 
       - name: Upload Allure results
         if: always()
