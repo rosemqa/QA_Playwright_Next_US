@@ -1,0 +1,15 @@
+INFO     BASE_PAGE:base_page.py:27 Go to url "https://www.next.us/en/style/st260486/c04288"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="image-gallery-quick-actions"]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:44 Click button "Zoom image"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="superzoom-image"]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:52 Check that image "Zoomed" is visible
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="superzoom-modal"] [data-testid*="pdp-thumb-"] img" at index "2"
+INFO     BASE_ELEMENT:base_element.py:44 Click image "Thumb"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="superzoom-modal"] [data-testid*="pdp-thumb-"] img" at index "2"
+INFO     IMAGE:image.py:18 Get source of image "Thumb"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="superzoom-image"]" at index "0"
+INFO     IMAGE:image.py:26 Check source of image "Zoomed"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="image-carousel-quick-actions-close-superzoom"]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:44 Click button "Close a zoomed image"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="superzoom-image"]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:68 Check that image "Zoomed" is missing

@@ -1,0 +1,9 @@
+INFO     BASE_PAGE:base_page.py:27 Go to url "https://www.next.us/en/style/st260486/c04288"
+INFO     BASE_PAGE:base_page.py:60 Press the Page Down key 1 times
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="back-to-top"]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:52 Check that button "Back to top" is visible
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="back-to-top"]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:44 Click button "Back to top"
+INFO     BASE_PAGE:base_page.py:70 Check that page is scrolled to the top
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="back-to-top"]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:60 Check that button "Back to top" is not visible

@@ -1,0 +1,22 @@
+INFO     BASE_PAGE:base_page.py:27 Go to url "https://www.next.us/en/style/st260486/c04288"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid=item-form-addToBag-button]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:84 Check that button "Add to bag" has text "ADD TO BAG"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="size-select"]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:44 Click dropdown "Select size"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator ".MuiList-root li" at index "5"
+INFO     BASE_ELEMENT:base_element.py:76 Get text of the "Size item" dropdown: X-Large
+INFO     BASE_ELEMENT:base_element.py:24 Get locator ".MuiList-root li" at index "5"
+INFO     BASE_ELEMENT:base_element.py:44 Click dropdown "Size item"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="size-select"]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:84 Check that dropdown "Select size" has text "X-Large"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="size-select"]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:76 Get text of the "Select size" dropdown: X-Large
+​
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid=item-form-addToBag-button]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:44 Click button "Add to bag"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid=item-form-addToBag-button]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:84 Check that button "Add to bag" has text "ADDED"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid=item-form-addToBag-button]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:84 Check that button "Add to bag" has text "ADD TO BAG"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="shopping-bag-link-button"]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:84 Check that button "Cart" has text "1"

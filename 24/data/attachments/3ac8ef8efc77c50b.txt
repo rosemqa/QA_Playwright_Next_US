@@ -1,0 +1,35 @@
+INFO     BASE_PAGE:base_page.py:27 Go to url "https://www.next.us/en/style/st260486/c04288"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="size-select"]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:44 Click dropdown "Select size"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator ".MuiList-root li" at index "5"
+INFO     BASE_ELEMENT:base_element.py:76 Get text of the "Size item" dropdown: X-Large
+INFO     BASE_ELEMENT:base_element.py:24 Get locator ".MuiList-root li" at index "5"
+INFO     BASE_ELEMENT:base_element.py:44 Click dropdown "Size item"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="size-select"]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:84 Check that dropdown "Select size" has text "X-Large"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="size-select"]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:76 Get text of the "Select size" dropdown: X-Large
+​
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid=item-form-addToBag-button]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:44 Click button "Add to bag"
+INFO     BASE_PAGE:base_page.py:27 Go to url "https://www.next.us/en/shoppingbag"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="header-adaptive-checkout"] a" at index "0"
+INFO     BUTTON:button.py:19 Check that button "Checkout" is enabled
+INFO     BASE_ELEMENT:base_element.py:24 Get locator ".shopping-bag-page-title .sbm-item-count" at index "0"
+INFO     BASE_ELEMENT:base_element.py:84 Check that text "Cart items count" has text "(1)"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator ".sbm-idDeleteButton" at index "0"
+INFO     BASE_ELEMENT:base_element.py:44 Click link "Remove from cart"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "#items" at index "0"
+INFO     BASE_ELEMENT:base_element.py:60 Check that component "Items section" is not visible
+INFO     BASE_ELEMENT:base_element.py:24 Get locator ".shopping-bag-page-title .sbm-item-count" at index "0"
+INFO     BASE_ELEMENT:base_element.py:84 Check that text "Cart items count" has text ""
+INFO     BASE_ELEMENT:base_element.py:24 Get locator ".sbm-idContinueShoppingButton" at index "0"
+INFO     BASE_ELEMENT:base_element.py:52 Check that button "Continue shopping" is visible
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="header-adaptive-checkout"] a" at index "0"
+INFO     BUTTON:button.py:27 Check that button "Checkout" is disabled
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="shopping-bag-link-button"]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:84 Check that button "Cart" has text "0"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator ".sb-subtitle" at index "0"
+INFO     BASE_ELEMENT:base_element.py:84 Check that text "Cart subtitle" has text "Your bag is empty"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator ".sbm-order-total-price" at index "0"
+INFO     BASE_ELEMENT:base_element.py:84 Check that text "Total price" has text "$0.00"

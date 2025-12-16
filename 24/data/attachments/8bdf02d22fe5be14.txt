@@ -1,0 +1,4 @@
+INFO     BASE_PAGE:base_page.py:27 Go to url "https://www.next.us/en/shop/womens/clothing"
+INFO     BASE_ELEMENT:base_element.py:100 Check that number of "Product card" components is 10
+INFO     BASE_PAGE:base_page.py:60 Press the Page Down key 4 times
+INFO     BASE_ELEMENT:base_element.py:100 Check that number of "Product card" components is 50

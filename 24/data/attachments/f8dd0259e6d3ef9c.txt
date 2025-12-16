@@ -1,0 +1,5 @@
+INFO     BASE_PAGE:base_page.py:27 Go to url "https://www.next.us/en/style/st260486/c04288"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="product-rating-summary"]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:44 Click link "Reviews"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "#bv_review_maincontainer h2" at index "0"
+INFO     BASE_ELEMENT:base_element.py:135 Check that the "Reviews title" text is in viewport

@@ -1,0 +1,12 @@
+INFO     BASE_PAGE:base_page.py:27 Go to url "https://www.next.us/en/style/st260486/c04288"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="item-form-favourite-iconbutton"]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:44 Click button "Add to favourites"
+INFO     BASE_PAGE:base_page.py:27 Go to url "https://www.next.us/en/favourites"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator ".dk_toggle" at index "0"
+INFO     BASE_ELEMENT:base_element.py:116 Check css property "border-color" of the "Choose size" dropdown has value rgb(148, 148, 148)
+INFO     BASE_ELEMENT:base_element.py:24 Get locator ".add-to-bag" at index "0"
+INFO     BASE_ELEMENT:base_element.py:44 Click link "Add to bag"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator ".dk_toggle" at index "0"
+INFO     BASE_ELEMENT:base_element.py:116 Check css property "border-color" of the "Choose size" dropdown has value rgb(217, 20, 64)
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="shopping-bag-link-button"]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:84 Check that button "Cart" has text "0"

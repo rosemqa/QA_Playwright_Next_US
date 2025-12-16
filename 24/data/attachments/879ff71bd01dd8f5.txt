@@ -1,0 +1,43 @@
+INFO     BASE_PAGE:base_page.py:27 Go to url "https://www.next.us/en/style/st260486/c04288"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="size-select"]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:44 Click dropdown "Select size"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator ".MuiList-root li" at index "2"
+INFO     BASE_ELEMENT:base_element.py:76 Get text of the "Size item" dropdown: Small
+INFO     BASE_ELEMENT:base_element.py:24 Get locator ".MuiList-root li" at index "2"
+INFO     BASE_ELEMENT:base_element.py:44 Click dropdown "Size item"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="size-select"]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:84 Check that dropdown "Select size" has text "Small"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="size-select"]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:76 Get text of the "Select size" dropdown: Small
+​
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid=item-form-addToBag-button]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:44 Click button "Add to bag"
+INFO     BASE_PAGE:base_page.py:27 Go to url "https://www.next.us/en/shoppingbag"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator ".sbm-idSaveForLaterButton" at index "0"
+INFO     BASE_ELEMENT:base_element.py:44 Click link "Save for later"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator ".sfl-item-description" at index "0"
+INFO     BASE_ELEMENT:base_element.py:76 Get text of the "SFL product name" text: Black/Slate/Grey Marl/White/Navy/Blue Regular Fit Essential Cotton T-Shirts 6 Pack
+INFO     BASE_ELEMENT:base_element.py:24 Get locator ".SaveForLater .sbm-item-price" at index "0"
+INFO     BASE_ELEMENT:base_element.py:76 Get text of the "SFL product price" text: $78.00
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "#items" at index "0"
+INFO     BASE_ELEMENT:base_element.py:60 Check that component "Items section" is not visible
+INFO     BASE_ELEMENT:base_element.py:24 Get locator ".sfl-idEditButton" at index "0"
+INFO     BASE_ELEMENT:base_element.py:44 Click link "Move to bag"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator ".SaveForLater" at index "0"
+INFO     BASE_ELEMENT:base_element.py:60 Check that component "Saved fo later" is not visible
+INFO     BASE_ELEMENT:base_element.py:24 Get locator ".sbm-item-description" at index "0"
+INFO     BASE_ELEMENT:base_element.py:84 Check that text "Cart product name" has text "Black/Slate/Grey Marl/White/Navy/Blue Regular Fit Essential Cotton T-Shirts 6 Pack"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator ".sfl-item-count" at index "0"
+INFO     BASE_ELEMENT:base_element.py:84 Check that text "SFL items count" has text "(0)"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator ".sfl-bag-notification" at index "0"
+INFO     BASE_ELEMENT:base_element.py:52 Check that text "SFL notification" is visible
+INFO     BASE_ELEMENT:base_element.py:24 Get locator ".sfl-bag-notification" at index "0"
+INFO     BASE_ELEMENT:base_element.py:84 Check that text "SFL notification" has text "Item has been moved to your bag"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="header-adaptive-checkout"] a" at index "0"
+INFO     BUTTON:button.py:19 Check that button "Checkout" is enabled
+INFO     BASE_ELEMENT:base_element.py:24 Get locator ".sbm-order-total-price" at index "0"
+INFO     BASE_ELEMENT:base_element.py:84 Check that text "Total price" has text "$78.00"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator ".saved-for-later .CloseNotification" at index "0"
+INFO     BASE_ELEMENT:base_element.py:44 Click button "Close the SFL notification"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator ".sfl-bag-notification" at index "0"
+INFO     BASE_ELEMENT:base_element.py:60 Check that text "SFL notification" is not visible

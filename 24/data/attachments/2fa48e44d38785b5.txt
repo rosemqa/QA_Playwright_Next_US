@@ -1,0 +1,17 @@
+INFO     BASE_PAGE:base_page.py:27 Go to url "https://www.next.us/en/shop/womens/clothing"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "div[id*="plp-horizontal-filter-"]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:44 Click button "MORE/LESS filters"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="plp-filter-chevron-price"]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:44 Click button "Price filter"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "#plp-price-slider span" at index "0"
+INFO     BASE_ELEMENT:base_element.py:76 Get text of the "Price range value" text:  $0 - $3,170
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "#plp-price-slider span" at index "0"
+INFO     BASE_ELEMENT:base_element.py:76 Get text of the "Price range value" text:  $0 - $3,170
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[aria-label="Set minimum value"]" at index "0"
+INFO     SLIDER:slider.py:18 Move "MIN price" slider handle by offset x=44, y=0
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "#plp-price-slider span" at index "0"
+INFO     BASE_ELEMENT:base_element.py:76 Get text of the "Price range value" text:  $610 - $3,170
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[aria-label="Set maximum value"]" at index "0"
+INFO     SLIDER:slider.py:18 Move "MAX price" slider handle by offset x=-41, y=0
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "#plp-price-slider span" at index "0"
+INFO     BASE_ELEMENT:base_element.py:76 Get text of the "Price range value" text:  $610 - $2,250

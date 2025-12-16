@@ -1,0 +1,19 @@
+INFO     BASE_PAGE:base_page.py:27 Go to url "https://www.next.us/en/style/st260486/c04288"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="size-guide-link-button"]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:44 Click button "Size guide"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="next-drawer"] .MuiPaper-root" at index "0"
+INFO     BASE_ELEMENT:base_element.py:52 Check that component "Drawer" is visible
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="toggle-option-0"]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:116 Check css property "background-color" of the "INCHES" button has value rgb(255, 255, 255)
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="toggle-option-1"]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:116 Check css property "background-color" of the "CM" button has value rgb(237, 239, 238)
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="toggle-option-0"]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:44 Click button "INCHES"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="toggle-option-0"]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:116 Check css property "background-color" of the "INCHES" button has value rgb(237, 239, 238)
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="toggle-option-1"]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:116 Check css property "background-color" of the "CM" button has value rgb(255, 255, 255)
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="drawer-close-button"]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:44 Click button "Close Drawer"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="next-drawer"] .MuiPaper-root" at index "0"
+INFO     BASE_ELEMENT:base_element.py:68 Check that component "Drawer" is missing

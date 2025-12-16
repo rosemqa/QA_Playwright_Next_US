@@ -1,0 +1,24 @@
+INFO     BASE_PAGE:base_page.py:27 Go to url "https://www.next.us/en/style/st260486/c04288"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="product-now-price"]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:76 Get text of the "Product price" text: $78
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="product-title"]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:76 Get text of the "Product title" text: Black/Slate/Grey Marl/White/Navy/Blue Regular Fit Essential Cotton T-Shirts 6 Pack
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="size-select"]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:44 Click dropdown "Select size"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator ".MuiList-root li" at index "4"
+INFO     BASE_ELEMENT:base_element.py:76 Get text of the "Size item" dropdown: Large
+INFO     BASE_ELEMENT:base_element.py:24 Get locator ".MuiList-root li" at index "4"
+INFO     BASE_ELEMENT:base_element.py:44 Click dropdown "Size item"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="size-select"]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:84 Check that dropdown "Select size" has text "Large"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="size-select"]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:76 Get text of the "Select size" dropdown: Large
+​
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid=item-form-addToBag-button]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:44 Click button "Add to bag"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="header-mini-shopping-bag"]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:52 Check that component "Mini cart" is visible
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="header-mini-shopping-bag-item-description"]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:84 Check that text "Product title" has text "Black/Slate/Grey Marl/White/Navy/Blue Regular Fit Essential Cotton T-Shirts 6 Pack"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "span [data-testid="header-mini-shopping-bag-total"]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:84 Check that text "Total" has text "$78.00"

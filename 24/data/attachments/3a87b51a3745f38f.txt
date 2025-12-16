@@ -1,0 +1,2 @@
+INFO     BASE_PAGE:base_page.py:27 Go to url "https://www.next.us/en/shop/womens/clothing"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="product_summary_colourchips"]" at index "5"

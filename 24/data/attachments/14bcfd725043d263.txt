@@ -1,0 +1,13 @@
+INFO     BASE_PAGE:base_page.py:27 Go to url "https://www.next.us/en/shop/womens/clothing"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="product-summary-favourites-button"]" at index "6"
+INFO     BASE_ELEMENT:base_element.py:44 Click button "Add to favorites"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="product-summary-favourites-button"]" at index "6"
+INFO     BASE_ELEMENT:base_element.py:127 Check that attribute "title" of "Add to favorites" button matches pattern "Remove from Favourites:" 
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="header-fav-badge-active"]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:52 Check that image "Active fav badge" is visible
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="product-summary-favourites-button"]" at index "6"
+INFO     BASE_ELEMENT:base_element.py:44 Click button "Add to favorites"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="product-summary-favourites-button"]" at index "6"
+INFO     BASE_ELEMENT:base_element.py:127 Check that attribute "title" of "Add to favorites" button matches pattern "Add to Favourites:" 
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="header-fav-badge-inactive"]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:52 Check that image "Inactive fav badge" is visible

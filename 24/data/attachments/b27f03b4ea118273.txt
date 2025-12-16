@@ -1,0 +1,36 @@
+INFO     BASE_PAGE:base_page.py:27 Go to url "https://www.next.us/en/style/st260486/c04288"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="item-form-favourite-iconbutton"]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:44 Click button "Add to favourites"
+INFO     BASE_PAGE:base_page.py:27 Go to url "https://www.next.us/en/favourites"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator ".item-details .item-description" at index "0"
+INFO     BASE_ELEMENT:base_element.py:76 Get text of the "Product name" text: Black/Slate/Grey Marl/White/Navy/Blue Regular Fit Essential Cotton T-Shirts 6 Pack
+INFO     BASE_ELEMENT:base_element.py:24 Get locator ".dk_toggle" at index "0"
+INFO     BASE_ELEMENT:base_element.py:44 Click dropdown "Choose size"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator ".dk_options li a" at index "5"
+INFO     BASE_ELEMENT:base_element.py:44 Click dropdown_item "Size"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator ".dk_options li a" at index "5"
+INFO     BASE_ELEMENT:base_element.py:76 Get text of the "Size" dropdown_item: US XL
+INFO     BASE_ELEMENT:base_element.py:24 Get locator ".add-to-bag" at index "0"
+INFO     BASE_ELEMENT:base_element.py:44 Click link "Add to bag"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "#moved-to-bag-notification" at index "0"
+INFO     BASE_ELEMENT:base_element.py:52 Check that text "Moved to bag notification" is visible
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "#moved-to-bag-notification" at index "0"
+INFO     BASE_ELEMENT:base_element.py:84 Check that text "Moved to bag notification" has text "Black/Slate/Grey Marl/White/Navy/Blue Regular Fit Essential Cotton T-Shirts 6 Pack has been moved to your Shopping Bag."
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "#moved-to-bag-notification" at index "0"
+INFO     BASE_ELEMENT:base_element.py:60 Check that text "Moved to bag notification" is not visible
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="header-mini-shopping-bag"]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:52 Check that component "Mini cart" is visible
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="header-mini-shopping-bag-item-description"]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:84 Check that text "Product title" has text "Black/Slate/Grey Marl/White/Navy/Blue Regular Fit Essential Cotton T-Shirts 6 Pack"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="header-fav-badge-inactive"]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:52 Check that image "Inactive fav badge" is visible
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="shopping-bag-link-button"]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:84 Check that button "Cart" has text "1"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "#favouriteItemsCountTarget" at index "0"
+INFO     BASE_ELEMENT:base_element.py:84 Check that text "Items count" has text "0"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator ".item-placeholder" at index "0"
+INFO     BASE_ELEMENT:base_element.py:60 Check that component "Product item" is not visible
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "#noItems" at index "0"
+INFO     BASE_ELEMENT:base_element.py:52 Check that text "No items" is visible
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "#noItems" at index "0"
+INFO     BASE_ELEMENT:base_element.py:84 Check that text "No items" has text "You have no saved items. Start to add your favourites by clicking the little heart next to items - we'll sync these across all your devices."

@@ -1,0 +1,18 @@
+INFO     BASE_PAGE:base_page.py:27 Go to url "https://www.next.us/en/style/st260486/c04288"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="item-form-favourite-iconbutton"]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:44 Click button "Add to favourites"
+INFO     BASE_PAGE:base_page.py:27 Go to url "https://www.next.us/en/favourites"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "#favouriteItemsCountTarget" at index "0"
+INFO     BASE_ELEMENT:base_element.py:84 Check that text "Items count" has text "1"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator ".remove-item-link" at index "0"
+INFO     BASE_ELEMENT:base_element.py:44 Click link "Remove item"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="header-fav-badge-inactive"]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:52 Check that image "Inactive fav badge" is visible
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "#favouriteItemsCountTarget" at index "0"
+INFO     BASE_ELEMENT:base_element.py:84 Check that text "Items count" has text "0"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator ".item-placeholder" at index "0"
+INFO     BASE_ELEMENT:base_element.py:60 Check that component "Product item" is not visible
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "#noItems" at index "0"
+INFO     BASE_ELEMENT:base_element.py:52 Check that text "No items" is visible
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "#noItems" at index "0"
+INFO     BASE_ELEMENT:base_element.py:84 Check that text "No items" has text "You have no saved items. Start to add your favourites by clicking the little heart next to items - we'll sync these across all your devices."

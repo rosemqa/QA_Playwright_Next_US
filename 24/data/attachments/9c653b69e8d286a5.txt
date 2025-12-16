@@ -1,0 +1,12 @@
+INFO     BASE_PAGE:base_page.py:27 Go to url "https://www.next.us/en/shop/womens/clothing"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "div[id*="plp-horizontal-filter-"]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:44 Click button "MORE/LESS filters"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="plp-filter-chevron-brand"]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:44 Click dropdown "Brand filter"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid*="plp-facet-checkbox-brand-brand:"]" at index "19"
+INFO     BASE_ELEMENT:base_element.py:44 Click dropdown_item "Brand"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid*="plp-facet-checkbox-brand-brand:"]" at index "19"
+INFO     BASE_ELEMENT:base_element.py:76 Get text of the "Brand" dropdown_item: Apricot
+(34)
+INFO     BASE_ELEMENT:base_element.py:36 Get a list of "[data-testid="product_summary_title"]" locators
+INFO     PLP:product_listing_page.py:180 Check that brand_name "apricot" is present in the product titles

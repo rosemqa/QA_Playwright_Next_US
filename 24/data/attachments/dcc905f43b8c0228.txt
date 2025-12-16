@@ -1,0 +1,11 @@
+INFO     BASE_PAGE:base_page.py:27 Go to url "https://www.next.us/en/style/st260486/c04288"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="item-description-tone-of-voice"]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:60 Check that accordion "Description content" is not visible
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "#panel-header" at index "0"
+INFO     BASE_ELEMENT:base_element.py:44 Click accordion "Description header"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="item-description-tone-of-voice"]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:52 Check that accordion "Description content" is visible
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "#panel-header" at index "0"
+INFO     BASE_ELEMENT:base_element.py:44 Click accordion "Description header"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="item-description-tone-of-voice"]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:60 Check that accordion "Description content" is not visible

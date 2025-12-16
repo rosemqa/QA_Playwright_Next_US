@@ -1,0 +1,5 @@
+INFO     BASE_PAGE:base_page.py:27 Go to url "https://www.next.us/en/shop/womens/clothing"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="plp-facet-checkbox-feat-feat:newin"]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:44 Click checkbox "New In"
+INFO     BASE_ELEMENT:base_element.py:92 Get number of "Product card" components
+INFO     BASE_ELEMENT:base_element.py:100 Check that number of "New In" texts is 10

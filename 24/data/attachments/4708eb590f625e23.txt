@@ -1,0 +1,17 @@
+INFO     BASE_PAGE:base_page.py:27 Go to url "https://www.next.us/en/shop/womens/clothing"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="horizontal-filter-second-row"]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:60 Check that component "Filters second row" is not visible
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "div[id*="plp-horizontal-filter-"]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:84 Check that button "MORE/LESS filters" has text "MORE"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "div[id*="plp-horizontal-filter-"]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:44 Click button "MORE/LESS filters"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="horizontal-filter-second-row"]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:52 Check that component "Filters second row" is visible
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "div[id*="plp-horizontal-filter-"]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:84 Check that button "MORE/LESS filters" has text "LESS"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "div[id*="plp-horizontal-filter-"]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:44 Click button "MORE/LESS filters"
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "[data-testid="horizontal-filter-second-row"]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:60 Check that component "Filters second row" is not visible
+INFO     BASE_ELEMENT:base_element.py:24 Get locator "div[id*="plp-horizontal-filter-"]" at index "0"
+INFO     BASE_ELEMENT:base_element.py:84 Check that button "MORE/LESS filters" has text "MORE"
