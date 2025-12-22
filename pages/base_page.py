@@ -1,7 +1,5 @@
 import time
-
-from typing import Literal, Pattern
-
+from typing import Pattern
 import allure
 from tools.logger import get_logger
 from playwright.sync_api import Page, TimeoutError, expect
@@ -12,13 +10,6 @@ logger = get_logger('BASE_PAGE')
 class BasePage:
     def __init__(self, page: Page):
         self.page = page
-
-    # def open(self, url: str):
-    #     step = f'Go to url "{url}"'
-    #
-    #     with allure.step(step):
-    #         logger.info(step)
-    #         self.page.goto(self.PAGE_URL)
 
     def open(self):
         step = f'Go to url "{self.PAGE_URL}"'
