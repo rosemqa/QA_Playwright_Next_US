@@ -2,7 +2,7 @@ services:
   pytest_runner:
     build: .
     image: playwright
-    command: pytest tests/test_pdp.py -k test_select_size
+    command: pytest --reruns 2
     volumes:
       - .:/test_project
 
