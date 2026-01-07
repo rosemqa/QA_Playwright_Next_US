@@ -5,8 +5,10 @@ import pytest
 from playwright.sync_api import sync_playwright, Browser, Page
 from pages.cart_page import CartPage
 from pages.favorites_page import FavoritesPage
+from pages.main_page import MainPage
 from pages.product_listing_page import ProductListingPage
 from pages.product_page import ProductPage
+from pages.search_results_page import SRP
 
 
 @pytest.fixture(scope='session')
@@ -73,3 +75,13 @@ def fav_page(page):
 @pytest.fixture()
 def cart_page(page):
     return CartPage(page)
+
+
+@pytest.fixture()
+def main_page(page):
+    return MainPage(page)
+
+
+@pytest.fixture()
+def srp(page):
+    return SRP(page)

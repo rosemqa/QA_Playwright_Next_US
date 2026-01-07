@@ -6,3 +6,4 @@ class URL:
     PLP = 'https://www.next.us/en/shop/womens/clothing'
     FAVORITES = 'https://www.next.us/en/favourites'
     CART_PAGE = 'https://www.next.us/en/shoppingbag'
+    SRP = 'https://www.next.us/en/search'

@@ -20,3 +20,11 @@ class Bag:
 class RecentlyViewed:
     empty_section = ('There are no Recently Viewed items to show. \n Items will appear here as you view them. You can '
                      'then select the images to revisit the items')
+
+
+class Placeholders:
+    SEARCH_INPUT = 'Search for anything here...'
+
+
+class Search:
+    NO_RESULTS_HEADER = lambda search_query: f'We found no results that closely match your search for "{search_query}"'
